@@ -1,0 +1,31 @@
+.benefits {
+    padding: 94px 0;
+    &__list {
+    display: flex;
+    gap: 30px;
+    }
+    &__item {
+    width: 270px;
+    }
+    &__image {
+    @extend %list;
+    content: "";
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-size: contain;
+    background: $button-color;
+    justify-content: center;
+    }
+    &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include font (null, 14px, 1.14, null);
+    text-transform: uppercase;
+    }
+    &__text {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    }
+}
