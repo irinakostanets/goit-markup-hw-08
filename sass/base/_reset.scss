@@ -30,3 +30,9 @@ a {
 p {
     color: $p-text-color;
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
