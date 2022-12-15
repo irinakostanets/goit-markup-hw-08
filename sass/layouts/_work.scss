@@ -1,6 +1,11 @@
 .work {
-    display: block;
+    display: none;
     padding-top: 0;
+    @media screen and (min-width:1200px) {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 94px;
+    }
     &__title {
         @include font (700, 36px,1.17, 0.03);
         text-align: center;
