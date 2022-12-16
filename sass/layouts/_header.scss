@@ -92,3 +92,72 @@ padding: 32px 0px;
     fill: $p-text-color;
 }
 
+.mob-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white-color;
+    top: 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+}
+.container {
+}
+.menu-close {
+    display: block;
+    margin-left: auto;
+    color: $black-color;
+    background-color: $white-color;
+    border: none;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+}
+.icon-menu-close {
+}
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+.menu-list__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.menu-list__link {
+    font-family: 'Roboto';
+    color: $black-color;
+    @include font (500, 40px, 1.18, 0.02);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+.mob-menu__tel {
+    color: $accent-color;
+    font-family: 'Roboto';
+    @include font (500, 34px, 1.18, 0.02);
+}
+.mob-menu__email {
+    color: $p-text-color;
+    font-family: 'Roboto';
+    @include font (500, 24px, 1.17, 0.02);
+}
+.mob-soc {
+    display: flex;
+    flex-direction: row;
+}
+.mob-soc__item:not(:last-child) {
+    margin-right: 20px;
+}
+.mob-soc__link {
+    font-family: 'Roboto';
+    @include font (500, 18px, 1.22, 0.02);
+    color: $accent-color;
+}
+.link {
+}
