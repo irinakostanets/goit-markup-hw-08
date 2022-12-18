@@ -2,25 +2,31 @@
     background-color: $main-backgroud-color;
     padding-top: 60px;
     padding-bottom: 60px;
-    @media screen and (min-width:768px) {
+    @include tablet {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-    @media screen and (min-width:1200px) {
+    @include desktop {
         padding-top: 94px;
         padding-bottom: 94px;
     }
     &__title {
+    @include font (700, 28px, 1.18, 0.03);
+    text-align: center;
+    margin-bottom: 30px;
+    @include desktop {
         margin-bottom: 50px;
-        padding-top: 94px;
+        // padding-top: 94px;
         @include font (null,36px, 1.17, null);
-        text-align: center;
+        }
+        
     }
     &__list {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
-        padding-bottom: 94px;
+        // padding-bottom: 94px;
     }
     &__logo {
         height: 92px;

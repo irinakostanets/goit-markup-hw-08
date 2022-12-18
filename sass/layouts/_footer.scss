@@ -1,25 +1,52 @@
 .footer {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // flex-direction: column;
+    padding: 60px 15px;
+    // align-items: baseline;
     background-color: $dark-backgroud-color;
+    @include desktop {
+        align-items: baseline;
+    }
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    
+    text-align: center;
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+        text-align: left;
+    }
 }
 
 .adr {
-    display: flex;
-    flex-direction: column;
-    margin-right: 70px;
+    
+    // flex-direction: column;
+    // margin-right: 70px;
+    @media screen and (min-width: 768px){
+        display: inline-block;
+        margin-right: 175px;
+    } 
+
+    @media screen and (min-width: 1200px){
+        display: flex;
+        margin-right: 70px;
+    } 
 }
 
 .logo-footer {
-    @include font (null, 26px, 1.19, null);
-   
+    
+    @include font (700, 24px, 1.17, 0.03);
+    text-align: center;
     color: $accent-color;
     text-decoration: none;
+    
+    @include desktop {
+        display: block;
+        @include font (null, 26px, 1.19, null);
+        text-align: left;
+    }
+    
 }
 
 .logo-footer-secondary {
@@ -29,6 +56,7 @@
 address {
     margin-top: 20px;
     width: 231px;
+    
 }
 
 .address .item+.item {
@@ -39,13 +67,18 @@ address {
     color: $white-color;
     font-family: 'Roboto';
     font-style: normal;
+    text-align: center;
     @include font (400, 14px, 1.71, null);
     text-decoration: none;
+    @include desktop {
+        text-align: left;
+    }
 }
 
 .footer-contact {
     font-family: 'Roboto';
     font-style: normal;
+    text-align: center;
     @include font (400, 14px, 1.71, 0.03);
 
     text-decoration: none;
@@ -56,10 +89,24 @@ address {
         color: $accent-color;
     }
 }
+.social {
+    margin-top: 60px;
+    @media screen and (min-width: 768px){
+        display: inline-block;
+        vertical-align: top; 
+     }
+ 
+      @media screen and (min-width: 1200px){
+        margin-right: 90px;
+     }
+}
 .soc-list {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 10px;
+    @include desktop {
+        justify-content: left;
+    }
 }
 
 .soc-item {
@@ -86,15 +133,26 @@ address {
 /*Footer-form*/
 
 .footer-form {
-    @extend %list;
-    margin-left: 93px;
-    width: 570px;
-    justify-content: center;
-}
-
+    display: block;
+    // margin-left: 93px;
+    // width: 570px;
+   
+    // @media screen and (min-width: 480px){
+    width: 450px;
+    text-align: center;
+    // }
+        @include desktop {
+            @extend %list;
+            // display: inline-block;
+            width: 570px;
+            margin-left: 93px;
+            justify-content: right;
+            }
+    }
 .footer-input {
     padding: 15px 16px;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 358px;
     font-family: 'Roboto';
     @include font (400, 16px, 1.25, 0.03);
@@ -112,10 +170,14 @@ address {
 }
 label {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    margin-top: 60px;
     @include font (700, 14px, 1.14, 0.03);
     text-transform: uppercase;
     color: $white-color;
+    @include desktop {
+   
+    }
 }
 .footer-button {
     margin-left: 12px;
