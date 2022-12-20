@@ -14,9 +14,6 @@
         margin-bottom: 50px;
         @include font (null,36px, 1.17, 0.03);
         text-align: center;
-        @media screen and (min-width:768px) {
-            padding-bottom: 30px;
-        }
     }
     &__list {
         display: flex;

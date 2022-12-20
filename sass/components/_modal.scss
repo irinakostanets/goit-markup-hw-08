@@ -23,9 +23,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 528px;
-    min-height: 581px;
+    min-width: 450px;
+    height: 609px;
     padding: 40px;
+    @include desktop {
+        min-width: 528px;
+        min-height: 581px;
+    }
+   
     background-color: $white-color;
 
     transform: translate(-50%, -50%) scale(1);
@@ -56,8 +61,11 @@
 .modal-form {
     display: flex;
     flex-direction: column;
-    max-width: 448px;
+    max-width: 370px;
     filter: none;
+    @include desktop {
+        max-width: 448px;
+    }
 }
 .form-field {
     display: flex;

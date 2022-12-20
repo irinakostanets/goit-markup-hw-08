@@ -4,7 +4,7 @@
     padding: 60px 15px;
     // align-items: baseline;
     background-color: $dark-backgroud-color;
-    @include desktop {
+    @include tablet {
         align-items: baseline;
     }
 }
@@ -12,13 +12,15 @@
 .footer-container {
     
     text-align: center;
-    @include desktop {
+    @include tablet {
         display: flex;
         align-items: baseline;
         text-align: left;
     }
 }
-
+.footer-top {
+    align-items: baseline;
+}
 .adr {
     
     // flex-direction: column;
@@ -35,14 +37,14 @@
 }
 
 .logo-footer {
-    
+    margin-bottom: 28px;
     @include font (700, 24px, 1.17, 0.03);
     text-align: center;
     color: $accent-color;
     text-decoration: none;
     
     @include desktop {
-        display: block;
+        // display: block;
         @include font (null, 26px, 1.19, null);
         text-align: left;
     }
@@ -54,9 +56,12 @@
 }
 
 address {
+    text-align: left;
     margin-top: 20px;
     width: 231px;
-    
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .address .item+.item {
@@ -151,8 +156,9 @@ address {
     }
 .footer-input {
     padding: 15px 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
+    margin: 20px auto;
     width: 358px;
     font-family: 'Roboto';
     @include font (400, 16px, 1.25, 0.03);
@@ -168,10 +174,8 @@ address {
         color: $contacts-footer-color;
     }
 }
-label {
+.footer-label {
     display: flex;
-    // flex-direction: column;
-    margin-top: 60px;
     @include font (700, 14px, 1.14, 0.03);
     text-transform: uppercase;
     color: $white-color;
@@ -180,7 +184,8 @@ label {
     }
 }
 .footer-button {
-    margin-left: 12px;
+    // margin-left: 12px;
+    margin: 0px auto;
     padding: 10px 28px;
     max-width: 200px;
     @include font (700, 16px, 1.88, 0.06);
